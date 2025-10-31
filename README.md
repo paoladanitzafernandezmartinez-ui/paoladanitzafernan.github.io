@@ -1,0 +1,1290 @@
+[index.html](https://github.com/user-attachments/files/23257463/index.html)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Corazón de Jesús - Oruro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background: linear-gradient(to right, #b30000, #cc0000);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            border-radius: 8px;
+            display: center;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+       
+        .school-name {
+            text-align: left;
+        }
+
+        .school-name h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .school-name p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+
+        /* Estilos de navegación */
+        nav {
+            background-color: #ffffff;
+            padding: 10px 0;
+            border-bottom: 2px solid #b30000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #b30000;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #b30000;
+            color: white;
+        }
+
+        /* Estilos del banner principal */
+        .hero {
+            background: linear-gradient(rgba(179, 0, 0, 0.8), rgba(179, 0, 0, 0.8)), url('https://source.unsplash.com/random/1200x600/?school') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #b30000;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos de secciones */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #b30000;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #b30000;
+            margin: 10px auto;
+        }
+
+        /* Estilos de la sección de historia */
+        .history-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .history-text {
+            flex: 1;
+        }
+
+        .history-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.2);
+            border: 1px solid #f0f0f0;
+            height: 300px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+        }
+
+        .history-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .history-image i {
+            font-size: 50px;
+        }
+
+        /* Estilos de la sección de fundadora */
+        .founder-section {
+            background-color: #f9f9f9;
+            border-top: 2px solid #b30000;
+            border-bottom: 2px solid #b30000;
+        }
+
+        .founder-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .founder-image {
+            flex: 1;
+            max-width: 280px;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.2);
+            border: 1px solid #f0f0f0;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .founder-image i {
+            font-size: 50px;
+        }
+
+        .founder-text {
+            flex: 2;
+        }
+
+        .founder-text h3 {
+            color: #b30000;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos de la sección de profesores */
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .teacher-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(179, 0, 0, 0.15);
+        }
+
+        .teacher-photo {
+            height: 280px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+            border-bottom: 2px solid #b30000;
+            overflow: hidden;
+        }
+
+        .teacher-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .teacher-photo i {
+            font-size: 50px;
+        }
+
+        .teacher-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .teacher-info h3 {
+            color: #b30000;
+            margin-bottom: 5px;
+        }
+
+        .teacher-info p {
+            color: #666;
+        }
+
+        /* Estilos de la sección de promociones */
+        .promotions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .promotion-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.1);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s;
+        }
+
+        .promotion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .promotion-photo {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+            border-bottom: 2px solid #b30000;
+            overflow: hidden;
+        }
+
+        .promotion-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .promotion-photo i {
+            font-size: 50px;
+        }
+
+        .promotion-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .promotion-info h3 {
+            color: #b30000;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos mejorados de la sección de noticias */
+        .news-section {
+            background-color: #f9f9f9;
+        }
+
+        .news-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .featured-news {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.1);
+        }
+
+        .featured-image {
+            height: 300px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+            border-bottom: 2px solid #b30000;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 25px;
+        }
+
+        .news-tag {
+            display: inline-block;
+            background-color: #b30000;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .featured-content h3 {
+            color: #b30000;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .news-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-news {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(179, 0, 0, 0.1);
+            display: flex;
+            transition: transform 0.3s;
+        }
+
+        .sidebar-news:hover {
+            transform: translateY(-5px);
+        }
+
+        .sidebar-image {
+            width: 120px;
+            height: 100px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+            border-right: 2px solid #b30000;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .sidebar-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar-content {
+            padding: 15px;
+            flex: 1;
+        }
+
+        .sidebar-content h4 {
+            color: #b30000;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .news-date {
+            color: #888;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.1);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+            border-bottom: 2px solid #b30000;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-image i {
+            font-size: 50px;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-content h3 {
+            color: #b30000;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos de la sección de ubicación */
+        .location-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .map-container {
+            height: 400px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b30000;
+            border: 1px solid #f0f0f0;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-container i {
+            font-size: 50px;
+        }
+
+        .location-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: #b30000;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background: linear-gradient(to right, #b30000, #cc0000);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ffffff;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ffcccc;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: white;
+            color: #b30000;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+            }
+
+            .history-content, .founder-content {
+                flex-direction: column;
+            }
+
+            .history-image, .founder-image {
+                max-width: 100%;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar-news {
+                flex-direction: column;
+            }
+            
+            .sidebar-image {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo-placeholder">
+                      <img src="images-removebg-preview.png" alt="">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="school-name">
+                        <h1>Colegio Corazón de Jesús</h1>
+                        <p>Turno Tarde - Fe y Alegría</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Oruro, Bolivia</p>
+                    <p><i class="fas fa-users"></i> 466 Estudiantes</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#fundadora">Fundadora</a></li>
+                <li><a href="#profesores">Profesores</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner principal -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Bienvenidos al Colegio Corazón de Jesús</h2>
+            <p>Una institución educativa de la Congregación Jesús María de Fe y Alegría, formando jóvenes con valores cristianos y excelencia académica.</p>
+            <a href="#historia" class="btn">Conoce Nuestra Historia</a>
+        </div>
+    </section>
+
+    <!-- Sección de Historia -->
+    <section id="historia" class="history">
+        <div class="container">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <p>Claro, aquí tienes una historia corta que reúne todos los elementos que mencionaste:
+
+                        **"Corazón de Jesús: Un Legado que Perdura"**
+                        
+                        La historia de nuestra Unidad Educativa “Corazón de Jesús” es un testimonio vivo de fe y generosidad. Todo comenzó con la visionaria Madre Luisa, cuya vida fue un faro de alegría, entrega y amor al servicio de los demás. Su espíritu incansable y su profunda dedicación a la misión de Jesús María marcaron para siempre a generaciones de estudiantes.
+                        
+                        En el seno de la Unidad Educativa “Jesús de Nazareth”, y viendo la necesidad de dar oportunidades a más jóvenes, la Madre Luisa impulsó un cambio transformador. Los paralelos C y D del turno mañana dieron un paso al lado para fundar un nuevo turno: la tarde. Este acto de desprendimiento dio origen, un 15 de abril de 2016, a nuestra amada institución.
+                        
+                        Aunque la Madre Luisa ya no está físicamente con nosotros, su luz y su ejemplo siguen guiando cada rincón de nuestra comunidad. Bajo su legado, el colegio ha crecido con fuerza. En 2022, con gran orgullo, vimos partir a nuestra primera promoción. Un logro significativo llegó para la Promoción 2025, al conseguir la anhelada acreditación del Bachillerato Técnico Humanístico (BTH).
+                        
+                        La alegría y la disciplina se unieron en 2023 con la fundación de nuestra banda de guerra, llenando de ritmo y color nuestros actos cívicos. Hoy, con una directora oficial al frente y guiados por nuestro lema, “Corazón de Jesús, En Tí Confío”, continuamos escribiendo esta historia, honrando el pasado y con la mirada puesta en un futuro lleno de esperanza.
+                        </p>
+                </div>
+                <div class="history-image">
+                    <img src="cole.jpg" alt="">
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Fundadora -->
+    <section id="fundadora" class="founder-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Fundadora</h2>
+            <div class="founder-content">
+                <div class="founder-image">
+                    <img src="madre luisa-pica.png" alt="">
+                    
+                </div>
+                <div class="founder-text">
+                    <h3>Madre Luisa</h3>
+                    <p>
+                        Con profunda gratitud y con la esperanza puesta en la Resurrección, despedimos a nuestra querida Madre Luisa María Díez. Nació cuando las hojas comenzaban a dorarse en 1931, y partió a la Casa del Padre en un abril de 2025, cuando el mundo florecía.
+                        
+                        Su larga vida no fue simplemente larga; fue ancha, profunda y luminosa. Fue un canto de amor constante, una melodía cuya letra estaba escrita en servicio y su música, en una fe inquebrantable. Con las manos generosas y un corazón que nunca supo de cansancio, se dedicó a la más noble de las tareas: ser jardinera del alma.
+                        
+                        En la tierra fértil de Bolivia, plantó semillas de esperanza en cada corazón que tocó. Regó con su bondad, podó con su sabiduría y abonó con su entrega incansable. No hubo terreno demasiado árido para su amor. Cultivó educación donde había ignorancia, fortaleza donde había debilidad, y fe donde vacilaba la esperanza.
+                        
+                        Aunque su presencia física nos fue arrebatada, su esencia permanece. No es una ausencia, sino una siembra. Madre Luisa no se ha ido; se ha transformado en el perfume de las flores que ella misma plantó, en la savia que recorre el tallo de la Unidad Educativa Corazón de Jesús, y en la brisa que anima a seguir creciendo.
+                        
+                        Su canto de amor no ha callado; ahora lo entona el coro de todas las vidas que transformó. Su jardín, hermoso y eterno, sigue floreciendo.
+                        
+                        Descansa en paz, querida Madre Luisa. Tu legado vive en nosotros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Profesores -->
+    <section id="profesores">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo Docente</h2>
+            <div class="teachers-grid">
+                <!-- Directora -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="dire.jpg" alt="">
+                     
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Directora</h3>
+                        <p> Irene Ayala Guzmán </p>
+                    </div>
+                </div>
+                
+                <!-- Coordinadora -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="madre lidia.jpg" alt="">
+                       
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Coordinadora</h3>
+                        <p>HNA. Lidia Mamani Villca RJM</p>
+                    </div>
+                </div>
+                
+                <!-- Profesores -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="pr ma.jpg" alt="Profesor de Matemáticas"> -
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesora de Matemáticas</h3>
+                        <p>Claudia Carla Pacheco Rubin de Celi</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="soc-pica.png" alt="Profesor de Lenguaje"> 
+                        
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesora de Ciencias Sociales</h3>
+                        <p>Edith Zoraida Soliz Ajhuacho</p>
+                    </div>
+                    
+                       
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profesores">
+        <div class="container">
+            <div class="teachers-grid">
+                <!-- Directora -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="victor.png" alt="">
+                     
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor de Com. y Lenguajes</h3>
+                        <p> Victor Hugo Silvestre Hurtado</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="pro lennn.jpeg" alt="">
+                       
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor de Com. y Lenguajes </h3>
+                        <p>Israel Waldo Quispe Alonzo </p>
+                    </div>
+                </div>
+                
+                <!-- Profesores -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="ferrr.png" alt="Profesor de Matemáticas"> -
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor Téc. tecnológica Espec.</h3>
+                        <p>Fernando</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="upscalemedia-transformed (1).jpeg" alt="Profesor de Lenguaje"> 
+                        
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor de Química - Física</h3>
+                        <p>Carlos Ignacio Perez</p>
+                    </div>
+                    
+                       
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profesores">
+        <div class="container">
+            <div class="teachers-grid">
+                <!-- Directora -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="pro filooo.png" alt="">
+                     
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor Cosm. Filosofía y Psicología</h3>
+                        <p>Juan Carlos Colque Condori</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="bioloooogii.jpg" alt="">
+                       
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesora Ciencias Naturales</h3>
+                        <p> Lidia Espinoza Cruz</p>
+                    </div>
+                </div>
+                
+                <!-- Profesores -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="filoso-pica.png" alt="Profesor de Matemáticas"> -
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesora de Cosm. Filosofía y Psicología  </h3>
+                        <p>Jimena Choque Herrera</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="pro s.jpg" alt="Profesor de Lenguaje"> 
+                        
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesora de Ciencias Sociales</h3>
+                        <p>Esther Paco Cordova</p>
+                    </div>
+                    
+                       
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profesores">
+        <div class="container">
+            <div class="teachers-grid">
+                <!-- Directora -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="tecnoooooo.jpg" alt="">
+                     
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesora Téc. Tecnológica Espec.</h3>
+                        <p>Vania Ines Usmayo Blanco</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <img src="rikitooo.png" alt="">
+                       
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor de Matemática </h3>
+                        <p> Rogelio Yucra Choque</p>
+                    </div>
+                </div>
+                
+                <!-- Profesores -->
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="luissss.png" alt="Profesor de Matemáticas"> -
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor Com. y Lenguajes  </h3>
+                        <p>Luis Armando Calizaya Flores</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-card">
+                    <div class="teacher-photo">
+                        <!-- ESPACIO PARA FOTO DE PROFESOR (VERTICAL) -->
+                        <img src="diegooo.png" alt="Profesor de Lenguaje"> 
+                        
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Profesor Ed. Física y Deporte</h3>
+                        <p>Diego Wilson Villarroel Prado</p>
+                    </div>
+                    
+                       
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Promociones -->
+    <section id="promociones" class="promotions-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Promociones</h2>
+            <div class="promotions-grid">
+                <!-- Promoción 2022 -->
+                <div class="promotion-card">
+                    <div class="promotion-photo">
+                        <img src="2022.jpg" alt="">
+                       
+                    </div>
+                    <div class="promotion-info">
+                        <h3>Promoción 2022</h3>
+                        <p>Nuestra primera generación de graduados, un hito histórico para nuestro colegio.</p>
+                    </div>
+                </div>
+                
+                <!-- Promoción 2023 -->
+                <div class="promotion-card">
+                    <div class="promotion-photo">
+                        <img src="2023.jpg" alt="">
+                    
+                    </div>
+                    <div class="promotion-info">
+                        <h3>Promoción 2023</h3>
+                        <p>Continuando con la tradición de excelencia educativa y formación en valores.</p>
+                    </div>
+                </div>
+                
+                <!-- Promoción 2024 -->
+                <div class="promotion-card">
+                    <div class="promotion-photo">
+                       <img src="2024.jpg" alt="">
+                      
+                    </div>
+                    <div class="promotion-info">
+                        <h3>Promoción 2024</h3>
+                        <p>Jóvenes preparados para enfrentar los desafíos del futuro con fe y determinación.</p>
+                    </div>
+                </div>
+                
+                <!-- Promoción 2025 -->
+                <div class="promotion-card">
+                    <div class="promotion-photo">
+                        <!-- ESPACIO PARA FOTO DE PROMOCIÓN 2025 (HORIZONTAL) -->
+                        <!-- <img src="ruta/a/promocion-2025.jpg" alt="Promoción 2025"> -->
+                       
+                    </div>
+                    <div class="promotion-info">
+                        <h3>Promoción 2025</h3>
+                        <p>Próxima generación que continuará el legado de nuestra institución.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Noticias Mejorada -->
+    <section id="noticias" class="news-section">
+        <div class="container">
+            <h2 class="section-title">Noticias y Eventos</h2>
+            
+            <div class="news-container">
+                <!-- Noticia Destacada -->
+                <div class="featured-news">
+                    <div class="featured-image">
+                        <img src="Captura de pantalla (14).png" alt="">
+                    </div>
+                    <div class="featured-content">
+                        <span class="news-tag">Destacado</span>
+                        <h3>Celebramos el 8° Aniversario de Nuestro Colegio</h3>
+                        <p>Este 15 de abril conmemoramos 8 años de trayectoria educativa con una ceremonia especial que contó con la participación de toda nuestra comunidad educativa.</p>
+                        <a href="#" class="btn" style="margin-top: 15px; display: inline-block;"></a>
+                    </div>
+                </div>
+                
+                <!-- Sidebar de Noticias -->
+                <div class="news-sidebar">
+                    <div class="sidebar-news">
+                        <div class="sidebar-image">
+                            <img src="WhatsApp Image 2025-10-30 at 13.16.40.jpeg" alt="">
+                        
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="news-date">20 Octubre, 2025</div>
+                            <h4>Ganadores en Olimpiadas de Ciencias Sociales</h4>
+                            <p>Nuestros estudiantes especificamente del curso 6to "B" participaron en las olimpiadas de Sociales de la UTO.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-news">
+                        <div class="sidebar-image">
+                            <img src="Collage de fotos San Valentín recortes beige (1).png" alt="">
+                           
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="news-date">Sin fecha prevista, 2025</div>
+                            <h4>Festival de Música Anual</h4>
+                            <p>Exitosa presentación de nuestros estudiantes en el festival artístico.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-news">
+                        <div class="sidebar-image">
+                            <img src="concurso.jpg" alt="">
+                        
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="news-date">16 Mayo, 2025</div>
+                            <h4>Concurso Departamental de Sistemas</h4>
+                            <p>Participación destacada en el concurso departamental de sistemas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Más Noticias -->
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <!-- ESPACIO PARA IMAGEN DE NOTICIA -->
+                        <!-- <img src="ruta/a/noticia4.jpg" alt="Actividad Deportiva"> -->
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">20 Abril, 2025</div>
+                        <h3>Campeonato Deportivo Intercursos</h3>
+                        <p>Competencia deportiva entre los diferentes cursos del colegio.</p>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <!-- ESPACIO PARA IMAGEN DE NOTICIA -->
+                        <!-- <img src="ruta/a/noticia5.jpg" alt="Charla Educativa"> -->
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">25 Octubre, 2025</div>
+                        <h3>Charla sobre Orientación Vocacional</h3>
+                        <p>Especialistas brindaron charlas a estudiantes de la promoción sobre opciones profesionales.</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación -->
+    <section id="ubicacion" class="location-section">
+        <div class="container">
+            <h2 class="section-title">Ubicación y Contacto</h2>
+            <div class="location-content">
+                <div class="map-container">
+                    <!-- ESPACIO PARA MAPA -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.9805645438023!2d-67.10109144406607!3d-17.979641200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e2b0cbec8de549%3A0xfd545bf60c38281d!2sJes%C3%BAs%20de%20Nazareth!5e0!3m2!1ses-419!2sbo!4v1761710656367!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" --> 
+                    
+                </div>
+                <div class="location-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                        <p>Comparte instalaciones con Colegio Jesús de Nazareth<br>Oruro, Bolivia</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Horario Normal</h3>
+                        <p>Turno Tarde<br>Lunes a Viernes<br>14:00 PM - 6:20 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-users"></i> Estudiantes</h3>
+                        <p>466 Estudiantes<br>4 Promociones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Colegio Corazón de Jesús</h3>
+                    <p>El Colegio Corazón de Jesús fue fundado el 15 de abril de 2016 en la ciudad de Oruro, Bolivia. Nuestra institución nace como parte de la Congregación Jesús María de Fe y Alegría.</p>
+                
+                
+                   
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100071181744701&sk=reviews&locale=es_LA" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                       
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#fundadora">Fundadora</a></li>
+                        <li><a href="#profesores">Profesores</a></li>
+                        <li><a href="#promociones">Promociones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Oruro, Bolivia</p>
+                    <p><i class="fas fa-phone"></i> (591) 67939999</p>
+                 
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Colegio Corazón de Jesús. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
